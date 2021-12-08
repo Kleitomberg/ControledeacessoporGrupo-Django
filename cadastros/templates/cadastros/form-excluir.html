@@ -1,0 +1,29 @@
+{% extends "paginas/base.html" %}
+{% load static%}
+
+{% block title %}
+<title>Cadastros</title>
+{% endblock%}
+
+
+{% block content %}
+<div class="container">
+    <h1> Excluir registros</h1>
+    <p> Confirme para Excluir.</p>
+ 
+
+    <form action="" method="POST" class="form-control">
+        {% csrf_token %}
+
+        <p> Deseja excluir:  <b> {{ object}} </b> </p>
+
+        {{form.as_p}}
+
+        <button type="submit" class="btn btn-success">Excluir</button>
+
+      <a href="{% url 'index' %}" class="btn btn-danger"> Cancelar</a>
+    </form>
+  
+</div>
+    
+{%endblock%}
