@@ -65,7 +65,7 @@
                       </li>  
                       {% endif %} 
                       <li class="nav-item">
-                        <a class="nav-link" href="{% url 'logout'%}">Meus dados </a>
+                        <a class="nav-link" href="{% url 'atualizar-dados'%}">Meus dados </a>
                       </li>                      
                       <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout'%}">Logout</a>
@@ -73,6 +73,9 @@
                      {% else %}
                      <li class="nav-item">
                       <a class="nav-link" href="{% url 'login'%}"> Fazer Login </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'cadastro'%}"> Criar conta </a>
                     </li>
                     {% endif %}
                     </ul>
